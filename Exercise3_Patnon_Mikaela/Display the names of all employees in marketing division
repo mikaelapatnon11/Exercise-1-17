@@ -1,0 +1,3 @@
+SELECT f_name, l_name
+FROM employee_data
+WHERE Tittle = 'Marketing';
