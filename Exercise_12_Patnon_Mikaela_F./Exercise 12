@@ -1,0 +1,12 @@
+1.	List departments and average ages where the average age in more than 30.
+SELECT title AS departments, AVG(age) AS average_age FROM employee_data GROUP BY departments HAVING AVG(age) > 30;
+
+ departments, average_age
+Business Analyst, 30.5000
+Senior Programmer, 33.0000
+Multimedia Programmer, 36.0000
+Senior Web Designer, 32.0000
+System Administrators, 34.5000
+Senior Marketing Executive, 36.0000
+Customer Service Manager, 32.0000
+Finance Manager, 36.0000
