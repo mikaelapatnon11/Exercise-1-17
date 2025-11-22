@@ -1,0 +1,70 @@
+EXERCISE 11
+
+1.	Count the number of employees who have been with Bignet for four or more years. 
+SELECT COUNT(*) FROM employee_data WHERE TIMESTAMPDIFF(YEAR, yos,CURDATE()) >= 4;
+
+2.	Count employees based on their ages. 
+SELECT  age, COUNT(*) AS total_employees FROM employee_data GROUP BY age;
+
+3.	Modify that above so that the ages are listed in a descending order.
+SELECT age, COUNT(*) AS total_employees FROM employee_data GROUP BY age ORDER BY age DESC;
+
+4.	Find the average in different departments(titles).
+
+title, average_   age
+'Web Designer',   '26.5000'
+'Marketing Excutive', '27.0000'
+'CEO', '28.0000'
+'Marketing Executive', '28.5000'
+'Business Analyst', '30.5000'
+'Senior Web Designer', '32.0000'
+'Customer Service Manager', '32.0000'
+'Senior Programmer', '33.0000'
+'System Administrators', '34.5000'
+'Multimedia Programmer', '36.0000'
+'Senior Marketing Executive', '36.0000'
+'Finance Manager', '36.0000'
+
+5.	Change the above statement so that the data is displayed in a descending order of averages ages.
+	
+title	average_age
+Multimedia Programmer	36.0000
+Senior Marketing Executive	36.0000
+Finance Manager	36.0000
+System Administrators	34.5000
+Senior Programmer	33.0000
+Senior Web Designer	32.0000
+Customer Service Manager	32.0000
+Business Analyst	30.5000
+Marketing Executive	28.5000
+CEO	28.0000
+Marketing Excutive	27.0000
+Web Designer	26.5000
+
+
+6.	Find the list the percentage perk (perk/salary * 100) for each employee with the % perks sorted in a descending order.
+
+l_name	f_name	perk_percentage
+Nanda	Alok	24.2857
+Simlai	Hal	24.2857
+Ali	Shahida	24.2857
+Kruger	Fred	22.6667
+Sakamuro	Edward	22.6667
+MacFarland	John	21.2500
+Anchor	Mary	20.0000
+Simon	Paul	20.0000
+Rajabi	Hassan	18.8889
+Gibson	Danny	18.8889
+Reindeer	Rudolft	17.8947
+Pillai	Ganesh	17.8947
+Pandit	Anamika	17.8947
+Hunter	Kim	17.8947
+Sehgal	Monica	17.8947
+Lewis	Roger	17.0000
+Harper	Mike	14.1667
+Champion	Peter	14.1667
+Sharma	Manish	8.5000
+Irvine	Joseph	2.3611
+Hoopla	Arthur	2.2667
+
+
