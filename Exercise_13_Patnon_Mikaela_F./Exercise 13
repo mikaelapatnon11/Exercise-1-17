@@ -1,0 +1,10 @@
+1.	Which Command displays the MSQL version?
+select version();
+
+2.	Use the SELECT command to evaluate 4X4X4 and name the column Cube of 4.
+select ((4*4*4)) as "Cube of 4";
+Cube of 4
+64
+
+3.	Display your name with SELECT.
+Select “MIKAY” as Name;
