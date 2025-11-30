@@ -1,0 +1,21 @@
+1. Our CEO falls in love with the petite Web Developer, Anamika Pandit. She now wants her last name to be changed to ‘Sharma’.
+UPDATE employee_data SET l_name = 'Sharma' WHERE l_name = 'Pandit' AND f_name = 'Anamika';
+
+l_name	f_name	title
+Sharma	Manish	CEO
+
+2. All Multimedia Programmers now want to be called Multimedia Specialists.
+
+UPDATE employee_data SET title = 'Multimedia Specialists' WHERE title = 'Multimedia Programmer';
+
+SELECT * FROM employee_data WHERE title = 'Multimedia Specialist';
+
+emp_id	f_name	l_name	title	age	yos	salary	perks	email
+10	Hassan	Rajabi	Multimedia Specialist	33	2	90000	17000	hasan@bugnetcom
+11	Paul	Simon	Multimedia Specialist	43	2	85000	17000	paul@bugnetcom
+12	Arthur	Hoopla	Multimedia Specialist	32	2	750000	17000	arthur@bugnetcom
+
+3.After his marriage, the CEO gives everyone a raise. Increase the salaries of all employees (except the CEO) byy $1000.
+
+UPDATE employee_data SET salary = salary + 1000 WHERE title != 'CEO';
+SELECT emp_id, f_name, l_name, title, salary FROM employee_data ORDER BY salary DESC;
