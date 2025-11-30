@@ -1,0 +1,48 @@
+1.	List IDs, birth dates, and emails of employees born in April.
+SELECT e_id, birth_date, p_email FROM employee_per WHERE MONTH(birth_date) = 4;
+ e_id	birth_date	p_email
+2	1968-04-02	johnny4@hotmail.com
+14	1965-04-28	tinkertone@email.com
+17	1970-04-18	mona@darling.com
+
+2.	Display IDs, birth dates, and spouse names of employees born in 1969 and sort the entries on the basis of their spouse names.
+SELECT e_id, birth_date, s_name FROM employee_per WHERE YEAR(birth_date) = 1969 ORDER BY s_name ASC;
+e_id	birth_date	s_name
+6	1969-12-31	
+
+3.	List the employee IDs for employees born under the current month.
+SELECT e_id FROM employee_per WHERE MONTH(birth_date) = MONTH(CURDATE());
+e_id
+11
+
+4.	How many unique birth years do we have? 12
+
+5.	Display a list of unique birth years and the number of employees born under each.
+SELECT YEAR(birth_date) AS birth_year, COUNT(*) AS employee_count FROM employee_per GROUP BY YEAR(birth_date) ORDER BY birth_year;
+birth_year	employee_count
+1957	1
+1964	2
+1965	1
+1966	2
+1967	1
+1968	6
+1969	1
+1970	1
+1972	2
+1973	2
+1974	1
+1975	1
+
+6.	How many employees were born under each month?
+SELECT MONTH(birth_date) AS birth_month, COUNT(*) AS employee FROM employee_per GROUP BY MONTH(birth_date) ORDER BY birth_month;
+ birth_month	employee
+3	2
+4	3
+5	1
+6	2
+7	1
+8	2
+9	2
+10	2
+11	1
+12	1
